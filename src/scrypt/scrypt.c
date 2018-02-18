@@ -652,7 +652,7 @@ void scrypt_1024_1_1_256_sp(const char* input, char* output, char* scratchpad)
 	uint32_t * XY;
 	uint32_t i;
 
-	const uint32_t N = 1024;
+	const uint32_t N = 1048576;
 	const uint32_t r = 1;
 	const uint32_t p = 1;
 
