@@ -736,7 +736,7 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
     //int64 nSubsidy = 50 * COIN;
-    int64 nSubsidy = (GetArgIntxx(25,"-Subsidy") * COIN);
+    int64 nSubsidy = (GetArgIntxx(100000,"-Subsidy") * COIN); //100,000 coins per block=5.256 billion per year with no halving since below is commented out.
 /*
     if (mapArgs.count("-custom_inflation"))
     {
@@ -757,8 +757,8 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast)
 {
-    const int64 nTargetTimespan = 7 * 24 * 60 * 60; // one week
-    const int64 nTargetSpacing = 5 * 60;
+    const int64 nTargetTimespan = 1000 * 60; // retarget difficulty every 16.666... Hour s= 100 blocks. was 1 week
+    const int64 nTargetSpacing = 10 * 60; //10 mins was 5 mins
     const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
     // Genesis block
