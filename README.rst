@@ -39,6 +39,15 @@ This has to be done:
 
 - Internationalization (convert WX language files)
 
++- Linux: daemon being set to 1 seems to mess with Linux users on Ubuntu and some others. If getting segfaults use daemon=0.
++- Windows qt-client: unresponsive while sending large transactions (can take several minutes)
++- Windows qt-client: ignores newly available connections if already running
++- Windows qt-client: not displaying UI after being minimized
++  (it doesn't actually crash, double click on notification area symbol to "wake it up" again)
++- normally hidden "change" part of transactions visible in transactions list
++  after restoring old (>100 transactions/mined blocks) wallet backup
+ 
+
 
 Build instructions 
 ===================
@@ -53,7 +62,7 @@ distribution are installed, for Debian and Ubuntu these are:
 
     apt-get install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev \
         libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
-        libssl-dev libdb4.8++-dev
+        libssl-dev libdb++-dev
 
 then execute the following:
 
