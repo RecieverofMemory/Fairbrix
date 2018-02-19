@@ -7,7 +7,7 @@ CONFIG += no_include_pwd
 
 # for boost 1.37, add -mt to the boost libraries
 #unix:LIBS += -lssl -lcrypto -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -ldb_cxx
-unix:LIBS += -lssl -lcrypto -lboost_system-mt -lboost_filesystem-mt -lboost_program_options-mt -lboost_thread-mt -ldb_cxx
+unix:LIBS += -lssl -lcrypto -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -ldb_cxx
 macx:DEFINES += __WXMAC_OSX__ MSG_NOSIGNAL=0 BOOST_FILESYSTEM_VERSION=3
 macx:LIBS += -lboost_thread-mt
 windows:DEFINES += __WXMSW__
