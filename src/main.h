@@ -35,7 +35,7 @@ static const int64 COIN = 100000000;
 static const int64 CENT = COIN/100;
 static const int64 MIN_TX_FEE = 10;
 static const int64 MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64 MAX_MONEY = 1369777777777 * COIN;
+static const int64 MAX_MONEY = 99999999999 * COIN;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 static const int COINBASE_MATURITY = 14400; //100 days
 #ifdef USE_UPNP
